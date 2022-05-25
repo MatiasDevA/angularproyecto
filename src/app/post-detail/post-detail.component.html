@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div class="card mx-auto" style="width: 18rem;">
+    <img src="{{respuesta?.image}}" class="card-img-top " alt="...">
+    <div class="card-body">
+      <p class="card-text">{{respuesta?.title}}</p>
+    </div>
+  </div>
+<form [formGroup]="form" (submit)="enviarData()">
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea appFocus formControlName="textAreaCreado" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<button class="btn btn-warning">Enviar</button>
+<ul>
+  <li *ngFor="let listaComentarios of comentarios">
+      <p>{{listaComentarios?.text}}</p>
+  </li>
+</ul>
+</form>
+<app-recordario-form></app-recordario-form>

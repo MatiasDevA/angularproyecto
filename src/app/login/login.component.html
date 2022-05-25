@@ -1,0 +1,21 @@
+<form [formGroup]="formLogin" (ngSubmit)="enviarDatos()">
+    <div class="mb-3 row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="text"  class="form-control-plaintext" id="staticEmail"  formControlName="email">
+            <p *ngIf="Email?.errors && Email?.touched" class="text-danger">Hce algo boludo para que no te aparezca el error</p>
+        </div>
+    </div>
+      <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword" formControlName="password">
+          <p *ngIf="Password?.valid" class="text-success"> Es correcto NABOOO</p>
+        </div>
+      </div>
+
+      <div>
+      <button class="btn btn-dark" [disabled]="formLogin.invalid">Enviar</button>
+    </div>
+    </form>
+    <app-recordario-form></app-recordario-form>

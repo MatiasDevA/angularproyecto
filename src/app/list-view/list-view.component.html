@@ -1,0 +1,30 @@
+<app-header></app-header>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="imagen">
+      <th mat-header-cell *matHeaderCellDef> Imagen</th>
+      <td mat-cell *matCellDef="let element "> <img appImagenrota [urlCustom]="'https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png'" src="{{element.image}}" class="w-25"> </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> Title</th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="views">
+      <th mat-header-cell *matHeaderCellDef> Views</th>
+      <td mat-cell *matCellDef="let element"> {{element.subtitle | uppercase}} </td>
+    </ng-container>
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  

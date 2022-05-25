@@ -1,0 +1,11 @@
+<header>
+<h1>{{title}}</h1>
+<app-button-task-list color="green" text="Add task" (btnClick)="toggleAddTask()"></app-button-task-list>
+</header>
+<!-- 
+    Recordar que el input que se maneja es. del header component se pasa el input del ts del button 
+    y de ahi pasa el template del button
+
+    el output desde la logica del componente hijo, emitimos esa accion del template hijo, al c
+    componente padre que asu vez le llega a la logica del componente padre
+-->

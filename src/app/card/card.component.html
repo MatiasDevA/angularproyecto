@@ -1,0 +1,8 @@
+<div class="card d-inline-flex" style="width: 18rem;">
+    <img appImagenrota src="{{dataEntrante?.image}}" class="card-img-top " alt="">
+    <div class="card-body">
+      <h5 class="card-title">{{dataEntrante?.title}}</h5>
+      <p class="card-text">{{dataEntrante?.subtitle}}</p>
+      <button class="btn btn-primary" (click)="agregarFavorito()">Agregar</button>
+    </div>
+  </div>

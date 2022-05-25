@@ -1,0 +1,10 @@
+<app-header></app-header>
+
+<div>
+    <input (change)="capturarFile($event)" type="file">
+</div>
+
+
+<div *ngIf="previsualizacionImage">
+    <img [src]="previsualizacionImage" alt="">
+</div>
